@@ -1,0 +1,14 @@
+﻿@{
+    var city = "Mykolaiv";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            @await Component.InvokeAsync("ProductList")
+        </div>
+        <div class="col-6">
+            @await Component.InvokeAsync("WeatherMap", city)
+        </div>
+    </div>
+</div>

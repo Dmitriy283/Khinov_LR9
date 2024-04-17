@@ -1,0 +1,30 @@
+﻿@model Khinov_LR9.Models.ResponseWeather
+<h1>Погода в @(Model.name)</h1>
+<div>
+    <div>
+        <span>Температура: @(Model.main.temp + " `C")</span>
+    </div>
+    <div>
+        <span>Город: @(Model.name)</span>
+    </div>
+    <div>
+        <span><img src=@("https://openweathermap.org/img/w/" + Model.weather[0].icon + ".png") /></span>
+        <span>@(Model.weather[0].description)</span>
+    </div>
+    <div>
+        <span>Максимальна температура: @(Model.main.temp_max + "`C")</span>
+    </div>
+    <div>
+        <span>Мінімальна температура: @(Model.main.temp_min + "`C")</span>
+    </div>
+    <div>
+        <span>Швидкість вітру: @(Model.wind.speed + " км/г")</span>
+    </div>
+    <div>
+        <span>Тиск: @(Model.main.pressure + " Н/м²")</span>
+    </div>
+    <div>
+        <span>lon: @(Model.coord.lon)</span>
+        <span>lat: @(Model.coord.lat)</span>
+    </div>
+</div>
